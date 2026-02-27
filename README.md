@@ -48,7 +48,7 @@ Start the game on New Boston with an inherited Corellian Prospector — a family
 
 ## Lore<br>
 <br>
-A few decades ago, a group of settlers arrived on New Sahara claiming to hail from a system no one can find on any chart. They brought with them an extraordinary knack for modular hull design, a cultural obsession with round ships, and vague references to old trade routes and a war that happened "a long time ago." They founded CEC, and their ships quickly earned a reputation across the Dirt Belt and beyond.<br>
+A long, long time ago, a group of settlers arrived on New Sahara claiming to hail from a system no one can find on any chart. They brought with them an extraordinary knack for modular hull design, a cultural obsession with round ships, and vague references to old trade routes and a war that happened "a long time ago." They founded CEC, and their ships quickly earned a reputation across the Dirt Belt and beyond.<br>
 <br>
 CEC builds hulls and frames only — no outfitter. The founders insist they could build far more advanced components, but "can't get the parts — not in this galaxy." So they design the most customizable ships they can using local technology, and leave the outfitting to you. It's the Corellian way: they build the ship, you make it yours.<br>
 <br>

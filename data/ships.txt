@@ -8,7 +8,7 @@
 #
 # The Corellian Engineering Corporation operates out of a dusty
 # shipyard on New Sahara in the Phecda system. The founders — a
-# close-knit group who arrived decades ago from what they vaguely
+# close-knit group who arrived long ago from what they vaguely
 # describe as "a system very far away" — brought with them a
 # remarkable talent for modular ship design and a stubborn insistence
 # on building everything round. No one has located their homeworld
