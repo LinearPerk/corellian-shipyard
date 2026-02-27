@@ -1,0 +1,2 @@
+name "corellian-shipyard"
+about "A family of 10 Corellian freighter-warships with NPC fleets, pirate variants, and an alternative start scenario. Tough, customizable hulls that trade hardpoints for durability and cargo space. Merchant convoys haul goods through the Dirt Belt while pirate tag teams hunt the outer systems. Start the game as a Dirt Belt miner's kid with a beat-up Prospector and a mountain of debt."

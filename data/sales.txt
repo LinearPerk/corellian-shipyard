@@ -1,0 +1,87 @@
+# Corellian Engineering
+# Shipyard and planet integration for the Corellian ship family
+
+
+# CEC YT-Series Freighters — factory shipyard
+shipyard "Corellian Engineering"
+	"Corellian Cargo"
+	"Corellian Trader"
+	"Corellian Merchantman"
+	"Corellian Ironclad"
+	"CEC Beam Drone"
+
+
+# Shipyard location: New Sahara (Phecda system)
+# Northern dirt belt factory world — fits a scrappy shipyard operation
+# Uses "add spaceport" to append CEC text after vanilla spaceport description
+planet "New Sahara"
+	add shipyard "Corellian Engineering"
+	add description `	The engineers at the Corellian yard sometimes call New Sahara "Tatooine" — apparently it reminds them of home. No one else has any idea what they're talking about.`
+	add spaceport `	The CEC yard founders arrived from "a system very far away" — round ships, mysterious origins.`
+
+
+# Rare Variants Shipyard
+shipyard "Corellian Rare Finds"
+	"Corellian Prospector"
+
+
+# Rare variants location: New Boston (Rutilicus system)
+# Established frontier hub — fits rare/salvaged ship market
+planet "New Boston"
+	add shipyard "Corellian Rare Finds"
+
+
+# Pirate Variants + Striker Shipyard
+shipyard "Black Market"
+	"Corellian Vagabond"
+	"Corellian Privateer"
+	"Corellian Striker"
+
+
+# Pirate variants location: Haven (Arneb system)
+# Northern frontier mining world with established black market connections
+planet "Haven"
+	add shipyard "Black Market"
+	add spaceport `	Around the back of the main yard, past the salvage lots, a handful of disc-shaped hulls sit under tarps. A dealer leans against one of them, arms crossed. "Corellian Engineering builds these on New Sahara. Officially, none of them end up here." He pulls back a tarp to reveal a sleek, modified hull. "The Vagabond's fast and quiet. The Privateer's for boarding work. And the Striker —" he grins "— the Striker's for people who think shields are a lifestyle and hull integrity is someone else's problem."`
+
+
+# -----------------------------------------------
+# CEC Warship Distribution — sold through dealers across human space
+# -----------------------------------------------
+
+# Ironclad distribution: Millrace (Fomalhaut system)
+# Syndicate factory world — CEC distribution contract for mass-produced escorts
+shipyard "Corellian Ironclad Dealer"
+	"Corellian Ironclad"
+
+planet "Millrace"
+	add shipyard "Corellian Ironclad Dealer"
+
+
+# Striker distribution: Wayfarer (Tarazed system)
+# Tarazed Corp world, southern hub — glass cannon attracts risk-takers
+shipyard "Corellian Striker Dealer"
+	"Corellian Striker"
+
+planet "Wayfarer"
+	add shipyard "Corellian Striker Dealer"
+	add spaceport `	A Corellian Striker sits at the edge of the dealer lot, atomic engines gleaming. The sales rep notices you looking. "Fastest thing CEC ever built. Twin heavy lasers, nuclear propulsion, paper-thin hull." She taps the warranty placard bolted to the landing strut. It reads: "CEC warranties explicitly exclude shield failure events, thermal runaway, and any incident the pilot could have avoided by flying a different ship."`
+
+
+# Vanguard distribution: Valhalla (Ultima Thule system)
+# Lionheart Industries, the Deep — luxury combat yacht for premium market
+shipyard "Corellian Vanguard Dealer"
+	"Corellian Vanguard"
+
+planet "Valhalla"
+	add shipyard "Corellian Vanguard Dealer"
+
+
+# Fortress distribution: Hephaestus (Markab system)
+# Syndicate industrial — defensive turret sphere fits Syndicate security philosophy
+shipyard "Corellian Fortress Dealer"
+	"Corellian Fortress"
+	"CEC Beam Drone"
+
+planet "Hephaestus"
+	add shipyard "Corellian Fortress Dealer"

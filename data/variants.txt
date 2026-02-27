@@ -1,0 +1,315 @@
+# Corellian Ship Variants
+# NPC outfit loadout variations for fleet diversity
+# Format: ship "Base" "Base (Variant)" with outfits only
+# Base loadout is defined in ships.txt — these are alternatives
+
+
+# Corellian Prospector variants (OS 340, WC 100, EC 95, 1G 2T)
+
+ship "Corellian Prospector" "Corellian Prospector (Armed)"
+	outfits
+		"Javelin Pod"
+		"Javelin" 300
+		"Javelin Storage Crate"
+		"Blaster Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Ramscoop"
+		"Fuel Pod"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+	# OS 270/340, WC 43/100, EC 81/95
+
+ship "Corellian Prospector" "Corellian Prospector (Miner)"
+	outfits
+		"Mining Laser"
+		"Mining Laser Turret" 2
+
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Ramscoop"
+		"Asteroid Scanner"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Small Radar Jammer"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+	# OS 279/340, WC 48/100, EC 81/95
+
+ship "Corellian Prospector" "Corellian Prospector (Smuggler)"
+	outfits
+		"Gatling Gun"
+		"Gatling Gun Ammo" 3000
+		"Blaster Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Ramscoop"
+		"Small Radar Jammer"
+		"Interference Plating"
+		"Cargo Scanner"
+		"Fuel Pod"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+	# OS 269/340, WC 39/100, EC 81/95
+
+
+# Corellian Vagabond variants (OS 380, WC 105, EC 115, 1G 2T)
+# Save V2 ≈ base loadout, so: 1 from save + 2 new designs
+
+ship "Corellian Vagabond" "Corellian Vagabond (Javelin)"
+	outfits
+		"Javelin Pod"
+		"Javelin" 1100
+		"Javelin Storage Crate"
+		"Javelin Turret" 2
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Interference Plating" 2
+		"Large Radar Jammer"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 376/380, WC 74/105, EC 101/115
+
+ship "Corellian Vagabond" "Corellian Vagabond (Scout)"
+	outfits
+		"Energy Blaster"
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Interference Plating" 2
+		"Large Radar Jammer"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Luxury Accommodations"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 360/380, WC 46/105, EC 101/115
+
+ship "Corellian Vagabond" "Corellian Vagabond (Raider)"
+	outfits
+		"Heavy Laser"
+		"Quad Blaster Turret" 2
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 365/380, WC 65/105, EC 101/115
+
+
+# Corellian Privateer variants (OS 385, WC 125, EC 101, 1G 2T)
+
+ship "Corellian Privateer" "Corellian Privateer (Gatling)"
+	outfits
+		"Gatling Gun"
+		"Gatling Gun Ammo" 19500
+		"Bullet Boxes" 3
+		"Gatling Turret" 2
+
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer" 2
+		"Brig"
+		"Laser Rifle" 6
+		"Nerve Gas" 2
+		"Fragmentation Grenades" 2
+		"Small Bunk Room"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 381/385, WC 54/125, EC 101/101
+
+ship "Corellian Privateer" "Corellian Privateer (Capture)"
+	outfits
+		"Heavy Rocket Launcher"
+		"Heavy Rocket" 20
+		"Quad Blaster Turret"
+		"Tractor Beam"
+
+		"RT-I Radiothermal"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer" 2
+		"Security Station"
+		"Brig"
+		"Laser Rifle" 8
+		"Nerve Gas" 6
+		"Small Bunk Room"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 368/385, WC 72/125, EC 101/101
+
+ship "Corellian Privateer" "Corellian Privateer (Missile)"
+	outfits
+		"Sidewinder Missile Launcher"
+		"Sidewinder Missile" 60
+		"Sidewinder Missile Rack"
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"RT-I Radiothermal"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer" 2
+		"Brig"
+		"Laser Rifle" 6
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 350/385, WC 61/125, EC 101/101
+
+
+# Corellian Cargo variants (OS 375, WC 130, EC 110, 1G 2T)
+
+ship "Corellian Cargo" "Corellian Cargo (Upgunned)"
+	outfits
+		"Meteor Missile Launcher"
+		"Meteor Missile" 45
+		"Meteor Missile Box"
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+
+		"RT-I Radiothermal"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Laser Rifle" 2
+		Supercapacitor
+		"Volcano Afterburner"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+	# OS 332/375, WC 69/130, EC 91/110
+
+ship "Corellian Cargo" "Corellian Cargo (Budget)"
+	outfits
+		"Sidewinder Missile Launcher"
+		"Sidewinder Missile" 68
+		"Sidewinder Missile Rack"
+		"Blaster Turret"
+		"Anti-Missile Turret"
+
+		"RT-I Radiothermal"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Laser Rifle" 2
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+	# OS 282/375, WC 51/130, EC 81/110
+
+ship "Corellian Cargo" "Corellian Cargo (Hauler)"
+	outfits
+		"Energy Blaster"
+		"Anti-Missile Turret" 2
+
+		"S3 Thermionic"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+	# OS 281/375, WC 37/130, EC 81/110
+
+
+# Corellian Trader variants (OS 395, WC 135, EC 120, 1G 2T)
+
+ship "Corellian Trader" "Corellian Trader (Upgraded)"
+	outfits
+		"Plasma Cannon"
+		"Quad Blaster Turret"
+		"Heavy Laser Turret"
+
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 373/395, WC 90/135, EC 101/120
+
+ship "Corellian Trader" "Corellian Trader (Defensive)"
+	outfits
+		"Torpedo Launcher"
+		"Torpedo" 30
+		"Heavy Anti-Missile Turret"
+		"Quad Blaster Turret"
+
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 331/395, WC 91/135, EC 101/120
+
+ship "Corellian Trader" "Corellian Trader (Express)"
+	outfits
+		"Energy Blaster"
+		"Quad Blaster Turret" 2
+
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Fuel Pod" 2
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	# OS 359/395, WC 55/135, EC 101/120

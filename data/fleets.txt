@@ -1,0 +1,205 @@
+# Corellian Fleets
+# Fleet definitions for Corellian ship spawns across human space
+# Ships generally appear alone or in pairs
+# Small groups of 3-5 are rare
+# Pirate Vagabond + Privateer hunt the player as tag teams
+# Any Corellian model can appear as a stolen pirate ship (rare)
+
+
+fleet "Corellian Merchants"
+	government "Merchant"
+	names "civilian"
+	cargo 3
+	personality
+		confusion 30
+		timid frugal appeasing
+	variant 10
+		"Corellian Cargo"
+	variant 8
+		"Corellian Trader"
+	variant 5
+		"Corellian Merchantman"
+	variant 3
+		"Corellian Cargo" 2
+	variant 2
+		"Corellian Trader"
+		"Corellian Cargo"
+	variant 1
+		"Corellian Merchantman"
+		"Corellian Ironclad"
+	variant 1
+		"Corellian Trader"
+		"Corellian Cargo" 2
+	variant 1
+		"Corellian Merchantman"
+		"Corellian Trader"
+		"Corellian Cargo" 2
+		"Corellian Ironclad"
+
+
+fleet "Corellian Miners"
+	government "Merchant"
+	names "civilian"
+	cargo 3
+	personality
+		confusion 30
+		timid frugal mining
+	variant 6
+		"Corellian Prospector"
+	variant 4
+		"Corellian Prospector (Miner)"
+	variant 3
+		"Corellian Prospector" 2
+	variant 2
+		"Corellian Prospector (Miner)"
+		"Corellian Prospector"
+	variant 1
+		"Corellian Prospector"
+		"Corellian Cargo"
+
+
+fleet "Corellian Escorts"
+	government "Merchant"
+	names "civilian"
+	cargo 0
+	personality
+		confusion 20
+		heroic frugal
+	variant 6
+		"Corellian Ironclad"
+	variant 3
+		"Corellian Ironclad" 2
+	variant 2
+		"Corellian Ironclad"
+		"Corellian Cargo"
+	variant 2
+		"Corellian Vanguard"
+	variant 1
+		"Corellian Fortress"
+		"CEC Beam Drone"
+	variant 1
+		"Corellian Vanguard"
+		"Corellian Ironclad"
+
+
+fleet "Corellian Pirates"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		nemesis plunders harvests
+		confusion 20
+	# Core: Vagabond + Privateer tag team
+	variant 5
+		"Corellian Vagabond"
+	variant 4
+		"Corellian Privateer"
+	variant 10
+		"Corellian Vagabond"
+		"Corellian Privateer"
+	variant 2
+		"Corellian Vagabond" 2
+		"Corellian Privateer"
+	variant 2
+		"Corellian Privateer" 2
+		"Corellian Vagabond"
+	# Stolen/captured production models (rare)
+	variant 1
+		"Corellian Cargo"
+	variant 1
+		"Corellian Trader"
+	variant 1
+		"Corellian Merchantman"
+	variant 1
+		"Corellian Ironclad"
+	variant 1
+		"Corellian Striker"
+	variant 1
+		"Corellian Vanguard"
+	variant 1
+		"Corellian Fortress"
+		"CEC Beam Drone"
+	# Prospector gone rogue
+	variant 1
+		"Corellian Prospector"
+	variant 1
+		"Corellian Prospector (Smuggler)"
+
+
+fleet "Corellian Elite"
+	government "Merchant"
+	names "civilian"
+	cargo 0
+	personality
+		confusion 10
+		heroic
+	variant 5
+		"Corellian Striker"
+	variant 4
+		"Corellian Vanguard"
+	variant 2
+		"Corellian Vanguard"
+		"Corellian Striker"
+	variant 1
+		"Corellian Striker" 2
+	variant 1
+		"Corellian Vanguard"
+		"Corellian Ironclad" 2
+
+
+# System spawns
+# Phecda: home system, highest density, all fleets
+# Inner ring (Merak, Algorel, Tania Australis): direct neighbors, moderate traffic
+# Outer ring (Mizar, Alioth, Dubhe): 2-hop neighbors, light traffic
+# Rutilicus: New Boston (starter planet, miners)
+# Northern pirates: Arneb (Haven black market)
+# Southern pirates: Antares, Zubeneschamali, Aldhibain
+
+system "Phecda"
+	add fleet "Corellian Merchants" 900
+	add fleet "Corellian Miners" 1800
+	add fleet "Corellian Escorts" 2200
+	add fleet "Corellian Elite" 3500
+	add fleet "Corellian Pirates" 3000
+
+system "Rutilicus"
+	add fleet "Corellian Miners" 1400
+	add fleet "Corellian Merchants" 2500
+
+system "Merak"
+	add fleet "Corellian Merchants" 1800
+	add fleet "Corellian Escorts" 3500
+	add fleet "Corellian Miners" 3000
+
+system "Algorel"
+	add fleet "Corellian Merchants" 1800
+	add fleet "Corellian Escorts" 3500
+	add fleet "Corellian Miners" 3000
+
+system "Tania Australis"
+	add fleet "Corellian Merchants" 1800
+	add fleet "Corellian Escorts" 3500
+
+system "Mizar"
+	add fleet "Corellian Merchants" 3000
+	add fleet "Corellian Elite" 6000
+
+system "Alioth"
+	add fleet "Corellian Merchants" 3000
+	add fleet "Corellian Elite" 6000
+
+system "Dubhe"
+	add fleet "Corellian Merchants" 3000
+
+system "Arneb"
+	add fleet "Corellian Pirates" 1100
+	add fleet "Corellian Merchants" 3000
+
+system "Antares"
+	add fleet "Corellian Pirates" 1500
+
+system "Zubeneschamali"
+	add fleet "Corellian Pirates" 1800
+
+system "Aldhibain"
+	add fleet "Corellian Pirates" 2200

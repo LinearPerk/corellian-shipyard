@@ -1,0 +1,1112 @@
+# ============================================================
+# Corellian Ships — A LinearPerk Production
+# Corellian Engineering Corporation (CEC) YT-Series
+# ============================================================
+#
+# "We build the ship. You make it yours."
+#     — CEC Chief Engineer, New Sahara Shipyard
+#
+# The Corellian Engineering Corporation operates out of a dusty
+# shipyard on New Sahara in the Phecda system. The founders — a
+# close-knit group who arrived decades ago from what they vaguely
+# describe as "a system very far away" — brought with them a
+# remarkable talent for modular ship design and a stubborn insistence
+# on building everything round. No one has located their homeworld
+# on any star chart. They change the subject when pressed, though
+# they occasionally reference "the old trade routes" and "a war
+# that happened a long time ago."
+#
+# CEC builds hulls and frames only. No outfits, no reactors, no
+# weapons. "We could build you a reactor that would make your hair
+# stand up, but we can't get the parts. Not in this galaxy." So
+# they build the best hulls they can with what's here, and you fit
+# them however you like. That's always been the Corellian way.
+#
+# The YT line traces back to the Prospector — an early prototype
+# that never made the production catalog. Most surviving examples
+# ended up on the frontier, in the hands of families who worked the
+# Dirt Belt asteroid fields for generations, hauling ore in a ship
+# older than their children, passing it and its debts from parent
+# to child. One such family on New Boston finally gave up the
+# business and signed the ship over — along with an 800,000 credit
+# mortgage and a bank officer who didn't look up from her screen.
+#
+# From the Prospector, CEC refined the design into the Cargo
+# workhorse, the Trader all-rounder, and the Merchantman heavy
+# hauler. When escort contracts needed filling, they stripped a
+# Cargo hull to armor plate and turret mounts and called it the
+# Ironclad. For customers who wanted speed over survival, the
+# Striker followed — atomic engines bolted to a hull so thin that
+# CEC warranties explicitly exclude "shield failure events." The
+# Vanguard came next: a luxury combat yacht for the kind of
+# customer who wants quad proton guns and a wet bar.
+#
+# Then there's the Fortress. A spherical turret platform with eight
+# weapon mounts, a drone bay, and almost no cargo space. So heavily
+# armed and so glacially slow that CEC engineers reportedly apologize
+# to the engines during final assembly.
+#
+# The pirate variants — Vagabond and Privateer — are black market
+# modifications that CEC officially denies any knowledge of, while
+# quietly noting that the hull work is "impressively competent."
+#
+# CEC builds the ships. LinearPerk built this. You make them yours.
+#
+#
+# Ship Index:
+# --------------------------------------------------
+# YT-Series Medium Freighters (Official CEC Line):
+#   Corellian Cargo              (corellian-cargo)         — entry-tier cargo hauler
+#   Corellian Trader             (corellian-trader)        — classic medium freighter
+#   Corellian Merchantman        (corellian-merchantman)   — heavy armed merchantman
+#
+# Medium Warships:
+#   Corellian Ironclad           (corellian-ironclad)      — mass-produced combat escort, armored Cargo variant
+#   Corellian Striker            (corellian-striker)       — glass cannon strike craft, nuclear engines
+#   Corellian Vanguard           (corellian-vanguard)      — luxury combat yacht, government contracts
+#
+# Heavy Warship:
+#   Corellian Fortress           (corellian-fortress)      — ultra-defensive turret sphere, security variant
+#
+# Rare Variants (New Boston):
+#   Corellian Prospector         (corellian-prospector)    — early YT prototype, mining/smuggling
+#
+# Pirate Variants (Black Market - Haven):
+#   Corellian Vagabond           (corellian-vagabond)      — pirate scout/smuggler, high shields
+#   Corellian Privateer          (corellian-privateer)     — pirate raider/boarder, highest shields
+# --------------------------------------------------
+
+
+# Corellian Prospector — Early YT Prototype (Rare)
+# Floor: Star Barge (190k, 600 shields, 1000 hull, 50 cargo)
+# Peer: Hauler (1.43M, 2500 shields, 3700 hull, 130 cargo)
+# Ceiling: Below Corellian Cargo
+# Trade-off: Crew-hungry (5), fragile, limited weapons, but cheap entry to YT series
+ship "Corellian Prospector"
+	sprite "ship/corellian-prospector"
+	attributes
+		category "Light Freighter"
+		"cost" 1800000
+		"shields" 2800
+		"hull" 3500
+		"required crew" 4
+		"bunks" 12
+		"mass" 490
+		"drag" 8.6
+		"heat dissipation" 0.50
+		"fuel capacity" 450
+		"cargo space" 130
+		"outfit space" 340
+		"weapon capacity" 100
+		"engine capacity" 95
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Mining Laser"
+		"Mining Laser Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Asteroid Scanner"
+		"Small Radar Jammer"
+		"Bunk Room"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+
+	gun 1 -60.6
+	turret 1 16.4 "Mining Laser Turret"
+	turret 1 16.4 "Anti-Missile Turret"
+		under
+	engine -6 89.9 1.2
+	engine 6 89.9 1.2
+	engine -18 85.4 1.2
+	engine 18 85.4 1.2
+	engine -29.5 78.9 1.2
+	engine 29.5 78.9 1.2
+	engine -39.5 70.9 1.2
+	engine 39.5 70.9 1.2
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 18
+	explode "small explosion" 30
+	explode "medium explosion" 25
+	explode "large explosion" 12
+	"final explode" "final explosion medium"
+	description "An early YT-series prototype that predates the production line. The cheapest hull in CEC's catalog — crew-hungry for its size, with limited weapons and weaker shields than anything else bearing the Corellian name. Comes stock with mining lasers and an asteroid scanner. Most surviving examples end up on the frontier, in the hands of miners and salvagers who value the modular design over polish."
+
+ship "Corellian Prospector" "Corellian Prospector (Combat)"
+	outfits
+		"Javelin Pod"
+		Javelin 300
+		"Javelin Storage Crate"
+		"Blaster Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+
+
+# Corellian Vagabond — Pirate Scout/Smuggler
+# Floor: Argosy (1.96M, 4200 shields, 2600 hull)
+# Peer: Corellian Merchantman (3.6M, 4500 shields, 4900 hull)
+# Ceiling: Premium tier
+# Trade-off: Exceptionally high shields (4900), weak hull (2700), fast, stealthy
+ship "Corellian Vagabond"
+	sprite "ship/corellian-vagabond"
+	attributes
+		category "Light Freighter"
+		"cost" 2900000
+		"shields" 4900
+		"hull" 2700
+		"required crew" 3
+		"bunks" 18
+		"mass" 450
+		"drag" 6.7
+		"heat dissipation" 0.75
+		"fuel capacity" 600
+		"cargo space" 160
+		"outfit space" 380
+		"weapon capacity" 105
+		"engine capacity" 115
+		weapon
+			"blast radius" 90
+			"shield damage" 900
+			"hull damage" 450
+			"hit force" 1350
+	outfits
+		"Gatling Gun"
+		"Gatling Gun Ammo" 3000
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Interference Plating" 2
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+	gun 0 -64.6
+	turret 1 12.9
+	turret 1 12.9
+		under
+	engine -5.5 93.4 1.2
+	engine 5.5 93.4 1.2
+	engine -16 91.9 1.2
+	engine 16 91.9 1.2
+	engine -26 88.9 1.2
+	engine 26 88.9 1.2
+	engine -35.5 82.9 1.2
+	engine 35.5 82.9 1.2
+	engine -44 74.9 1.2
+	engine 44 74.9 1.2
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 18
+	explode "small explosion" 32
+	explode "medium explosion" 28
+	explode "large explosion" 14
+	"final explode" "final explosion medium"
+	description "A pirate-modified YT-series freighter built for speed and discretion. Exceptionally strong shields paired with a fragile hull — devastating while shields hold, desperate if they drop. Fast enough to choose its fights, with stealth plating, jammers, and a full sensor suite. Only three crew needed. Available exclusively through unofficial channels."
+
+ship "Corellian Vagabond" "Corellian Vagabond (Torpedo)"
+	outfits
+		"Torpedo Launcher"
+		"Torpedo" 30
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+# Corellian Privateer — Pirate Raider/Boarder
+# Floor: Argosy (1.96M, 4200 shields, 2600 hull)
+# Peer: Corellian Merchantman (3.6M, 4500 shields, 4900 hull)
+# Ceiling: Premium pirate tier
+# Trade-off: Highest shields (5100), weak hull (2900), boarding focus, slow
+ship "Corellian Privateer"
+	sprite "ship/corellian-privateer"
+	attributes
+		category "Heavy Freighter"
+		"cost" 3100000
+		"shields" 5100
+		"hull" 2900
+		"required crew" 6
+		"bunks" 24
+		"mass" 510
+		"drag" 7.8
+		"heat dissipation" 0.60
+		"fuel capacity" 600
+		"cargo space" 185
+		"outfit space" 385
+		"weapon capacity" 125
+		"engine capacity" 101
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Heavy Rocket Launcher"
+		"Heavy Rocket" 20
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+
+		"RT-I Radiothermal"
+		"LP144a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer" 2
+		Brig
+		"Laser Rifle" 6
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+	gun 1 -66.1
+	turret 0 11.4
+	turret 0 10.9
+		under
+	engine -5.5 97.9 1.2
+	engine 5.5 97.9 1.2
+	engine -16 94.9 1.2
+	engine 16 94.9 1.2
+	engine -26 91.4 1.2
+	engine 26 91.4 1.2
+	engine -35.5 86.4 1.2
+	engine 35.5 86.4 1.2
+	engine -44 79.4 1.2
+	engine 44 79.4 1.2
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 18
+	explode "small explosion" 32
+	explode "medium explosion" 28
+	explode "large explosion" 14
+	"final explode" "final explosion medium"
+	description "A pirate raider built for boarding actions, with the strongest shields of any Corellian freighter. Heavy crew complement with boarding marines and a brig for prisoners. Slower than the Vagabond but significantly tougher — trades speed for durability and cargo space for plunder storage. Rarely seen without a Vagabond nearby."
+
+ship "Corellian Privateer" "Corellian Privateer (Boarding)"
+	outfits
+		"Heavy Rocket Launcher"
+		"Heavy Rocket" 20
+		"Quad Blaster Turret"
+		"Tractor Beam"
+
+		"RT-I Radiothermal"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer" 2
+		Brig
+		"Security Station"
+		"Small Bunk Room"
+		"Laser Rifle" 8
+		"Nerve Gas" 6
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+
+# Corellian Striker — Glass Cannon Strike Craft
+# Floor: Raven (2.2M, 4700 shields, 1400 hull)
+# Peer: Splinter (3.1M, 5200 shields, 1700 hull) / Manta (3.4M, 5900 shields, 1500 hull)
+# Ceiling: Medium Warship tier
+# Trade-off: Very high shields (5600), very weak hull (2400), extremely fast, nuclear engines
+ship "Corellian Striker"
+	sprite "ship/corellian-striker"
+	attributes
+		category "Medium Warship"
+		"cost" 3800000
+		"shields" 5600
+		"hull" 2400
+		"required crew" 2
+		"bunks" 12
+		"mass" 400
+		"drag" 5.3
+		"heat dissipation" 0.40
+		"fuel capacity" 600
+		"cargo space" 80
+		"outfit space" 440
+		"weapon capacity" 140
+		"engine capacity" 140
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Heavy Laser" 2
+		"Heavy Laser Turret"
+		"Heavy Anti-Missile Turret"
+
+		"Fission Reactor"
+		"LP036a Battery Pack"
+		"LP144a Battery Pack"
+		"D67-TM Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Cooling Ducts" 2
+
+		"A520 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+
+	gun -17.5 -108.6
+	gun 14 -107.6
+	turret 0.5 8.9
+	turret 1 8.9
+		under
+	engine 2.5 105.9 1.3
+	engine -20 89.4 1.2
+	engine 24 88.4 1.2
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 18
+	explode "small explosion" 30
+	explode "medium explosion" 24
+	explode "large explosion" 12
+	"final explode" "final explosion medium"
+	description "A glass cannon strike craft built on a heavily modified YT-1300 hull. Atomic engines and twin heavy lasers make it extremely fast and hard-hitting, but its paper-thin hull means a shield failure is almost certainly fatal. A ship for skilled pilots only."
+
+ship "Corellian Striker" "Corellian Striker (Proton)"
+	outfits
+		"Proton Gun" 2
+		"Proton Turret" 2
+
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Water Coolant System"
+		"Luxury Accommodations"
+		"Fuel Pod" 2
+
+		"A520 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Volcano Afterburner"
+		"Scram Drive"
+
+ship "Corellian Striker" "Corellian Striker (Torpedo)"
+	outfits
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Heavy Laser Turret" 2
+
+		"Fission Reactor"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cooling Ducts" 2
+
+		"A520 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Volcano Afterburner" 2
+		"Scram Drive"
+
+
+# Corellian Vanguard — Luxury Combat Yacht
+# Floor: Firebird (3.7M, 5800 shields, 3400 hull)
+# Peer: Osprey (4.2M, 7200 shields, 1600 hull)
+# Ceiling: Frigate (5.2M, 8000 shields, 2500 hull)
+# Trade-off: Exceptional shields (7200), good hull (3800), quad guns, jack-of-all-trades, luxury yacht
+ship "Corellian Vanguard"
+	sprite "ship/corellian-vanguard"
+	attributes
+		category "Medium Warship"
+		"cost" 5900000
+		"shields" 7200
+		"hull" 3800
+		"required crew" 6
+		"bunks" 20
+		"mass" 580
+		"drag" 7.1
+		"heat dissipation" 0.50
+		"fuel capacity" 600
+		"cargo space" 95
+		"outfit space" 512
+		"weapon capacity" 200
+		"engine capacity" 120
+		weapon
+			"blast radius" 115
+			"shield damage" 1150
+			"hull damage" 575
+			"hit force" 1725
+	outfits
+		"Proton Gun" 4
+		"Heavy Anti-Missile Turret"
+		"Quad Blaster Turret"
+
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer"
+		"Liquid Nitrogen Cooler"
+		"Luxury Accommodations"
+
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+
+	gun -8.4 -118.8
+	gun 8.4 -118.8
+	gun 3.2 -122.2
+	gun -3.2 -122.2
+	turret 0 30
+	turret 0.1 30.2
+		under
+	engine -4.2 116.3 1.2
+	engine 4.2 116.3 1.2
+	engine -13 114.2 1.2
+	engine 13 114.2 1.2
+	engine -20.8 111.2 1.2
+	engine 20.8 111.2 1.2
+	engine -28.6 106 1.2
+	engine 28.6 106 1.2
+	engine -36.4 99.4 1.2
+	engine 36.4 99.4 1.2
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 18
+	explode "small explosion" 34
+	explode "medium explosion" 28
+	explode "large explosion" 16
+	"final explode" "final explosion medium"
+	description "CEC's flagship combat yacht — four proton guns, exceptional shielding, and enough bunks and cargo space to serve as a mobile headquarters. More expensive than the Firebird or Osprey but trades raw firepower for versatility. A ship for independent operators who need a single hull that can fight, haul, and carry passengers."
+
+ship "Corellian Vanguard" "Corellian Vanguard (Torpedo)"
+	outfits
+		"Torpedo Launcher" 4
+		"Torpedo" 150
+		"Torpedo Storage Rack" 2
+		"Heavy Laser Turret" 2
+
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Ramscoop"
+
+		"A520 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+
+ship "Corellian Vanguard" "Corellian Vanguard (Heavy Laser)"
+	outfits
+		"Heavy Laser" 4
+		"Heavy Laser Turret"
+		"Heavy Anti-Missile Turret"
+
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Cooling Ducts"
+		"Luxury Accommodations"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"A370 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Scram Drive"
+
+ship "Corellian Vanguard" "Corellian Vanguard (Brawler)"
+	outfits
+		"Plasma Cannon" 4
+		"Proton Turret" 2
+
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Cooling Ducts"
+		"Fuel Pod"
+
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Volcano Afterburner"
+		"Scram Drive"
+
+
+# Corellian Cargo — Entry-Tier Medium Freighter
+# Floor: Better than Hauler (2500 shields, 3700 hull, 130 cargo, 350 outfit)
+# Ceiling: Below Corellian Trader
+# Trade-off: Fewer hardpoints (2G+4T → 1G+2T) = better stats per ton
+ship "Corellian Cargo"
+	sprite "ship/corellian-cargo"
+	attributes
+		category "Light Freighter"
+		"cost" 2300000
+		"shields" 3200
+		"hull" 4000
+		"required crew" 4
+		"bunks" 16
+		"mass" 530
+		"drag" 9.2
+		"heat dissipation" 0.55
+		"fuel capacity" 500
+		"cargo space" 145
+		"outfit space" 375
+		"weapon capacity" 130
+		"engine capacity" 110
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Heavy Laser"
+		"Heavy Anti-Missile Turret" 2
+
+		"S3 Thermionic"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+		"Scram Drive"
+
+	gun -2 -57.1
+	turret -2 18.4
+	turret -2 18.4
+		under
+	engine -1 91.9 1.3
+	engine -17.5 92.4 1.2
+	engine 14.5 91.4 1.2
+	engine 29.5 83.4 1.2
+	engine -32.5 84.9 1.2
+	engine -44.5 72.9 1.2
+	engine 41 74.4 1.2
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 20
+	explode "small explosion" 34
+	explode "medium explosion" 28
+	explode "large explosion" 14
+	"final explode" "final explosion medium"
+	description "CEC's entry-level production freighter. Better shields, hull, and cargo than the Hauler at a higher price, with a single gun and dual turrets. A solid workhorse for trade routes — enough defense to discourage casual raiders, not enough to win a real fight."
+
+ship "Corellian Cargo" "Corellian Cargo (Heavy)"
+	outfits
+		"Meteor Missile Launcher"
+		"Meteor Missile" 45
+		"Meteor Missile Box"
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+
+		"RT-I Radiothermal"
+		"LP036a Battery Pack"
+		Supercapacitor
+		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Laser Rifle" 2
+
+		"Volcano Afterburner"
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+
+ship "Corellian Cargo" "Corellian Cargo (Escort)"
+	outfits
+		"Sidewinder Missile Launcher"
+		"Sidewinder Missile" 68
+		"Sidewinder Missile Rack"
+		"Blaster Turret"
+		"Anti-Missile Turret"
+
+		"RT-I Radiothermal"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Laser Rifle" 2
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
+
+
+# Corellian Trader — Classic Medium Freighter
+# Incremental upgrade over Corellian Cargo
+# Trade-off: Fewer hardpoints (2G+4T → 1G+2T) = better stats per ton
+ship "Corellian Trader"
+	sprite "ship/corellian-trader"
+	attributes
+		category "Heavy Freighter"
+		"cost" 2800000
+		"shields" 3800
+		"hull" 4400
+		"required crew" 4
+		"bunks" 18
+		"mass" 580
+		"drag" 9.9
+		"heat dissipation" 0.52
+		"fuel capacity" 600
+		"cargo space" 165
+		"outfit space" 395
+		"weapon capacity" 135
+		"engine capacity" 120
+		weapon
+			"blast radius" 90
+			"shield damage" 900
+			"hull damage" 450
+			"hit force" 1350
+	outfits
+		"Torpedo Launcher"
+		"Torpedo" 30
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+	gun 0 -67.6
+	turret -0.5 15.9 "Quad Blaster Turret"
+	turret -0.5 16.4 "Heavy Anti-Missile Turret"
+		under
+	engine -0.5 103.9 1.2
+	engine -13 101.4 1.2
+	engine 13 101.4 1.2
+	engine -26 96.4 1.2
+	engine 26 96.4 1.2
+	engine -38.5 89.4 1.1
+	engine 38.5 89.4 1.1
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 70 30
+	explode "tiny explosion" 20
+	explode "small explosion" 34
+	explode "medium explosion" 28
+	explode "large explosion" 14
+	"final explode" "final explosion medium"
+	description "The most popular ship in CEC's catalog — a modular freighter that solidly outperforms the Argosy in hull and cargo at the cost of fewer hardpoints and weaker shields. Generous outfit space and balanced design make it the go-to platform for independent captains who want room to grow."
+
+ship "Corellian Trader" "Corellian Trader (Smuggler)"
+	outfits
+		"Plasma Cannon"
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Interference Plating" 2
+		"Large Radar Jammer"
+		"Cargo Scanner"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Volcano Afterburner"
+		"Scram Drive"
+
+
+# Corellian Merchantman — Heavy Armed Merchantman
+# Top tier: Better than Mule (5400 shields, 4400 hull, 170 cargo, 440 outfit)
+# Ceiling: Not quite Hauler II level
+# Trade-off: Fewer hardpoints (2G+4T → 1G+2T) = better stats per ton
+ship "Corellian Merchantman"
+	sprite "ship/corellian-merchantman"
+	attributes
+		category "Heavy Freighter"
+		"cost" 3600000
+		"shields" 4500
+		"hull" 4900
+		"required crew" 6
+		"bunks" 20
+		"mass" 650
+		"drag" 10.8
+		"heat dissipation" 0.50
+		"fuel capacity" 700
+		"cargo space" 190
+		"outfit space" 420
+		"weapon capacity" 140
+		"engine capacity" 130
+		weapon
+			"blast radius" 105
+			"shield damage" 1050
+			"hull damage" 525
+			"hit force" 1575
+	outfits
+		"Torpedo Launcher"
+		"Torpedo" 30
+		"Quad Blaster Turret" 2
+
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+	gun 0 -68.6
+	turret 0 10.4
+	turret 0 10.9
+		under
+	engine 0 94.9 1.3
+	engine -11 92.4 1.2
+	engine 11 92.4 1.2
+	engine -22 88.4 1.2
+	engine 22 88.4 1.2
+	engine -32 84.9 1.1
+	engine 32 84.9 1.1
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 30
+	explode "large explosion" 16
+	explode "huge explosion" 5
+	"final explode" "final explosion medium"
+	description "CEC's premium freighter, competing with the Mule at a lower price point. Offers better hull and cargo capacity but weaker shields and less outfit space. A step up from the YT-1300 for established merchants hauling valuable cargo through dangerous space."
+
+ship "Corellian Merchantman" "Corellian Merchantman (Heavy)"
+	outfits
+		"Heavy Rocket Pod"
+		"Heavy Rocket" 2
+		"Heavy Laser Turret"
+		"Quad Blaster Turret"
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer"
+		"Fuel Pod"
+		"Ramscoop"
+
+		"Orca Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Scram Drive"
+
+ship "Corellian Merchantman" "Corellian Merchantman (Armored)"
+	outfits
+		"Torpedo Launcher"
+		"Torpedo" 30
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Fuel Pod"
+		"Fragmentation Grenades" 4
+		"Laser Rifle" 4
+		"Ramscoop"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+
+# Corellian Fortress — Ultra-Defensive Turret Sphere
+# Floor: Mule (4.08M, 4400 shields, 5200 hull, 280 cargo)
+# Peer: Bactrian (11.1M, 7600 shields, 8000 hull, 420 cargo)
+# Ceiling: Premium heavy combat freighter
+# Trade-off: Exceptional hull (7800), 8 turrets + drone bay, very slow, minimal cargo (15), security focus
+ship "Corellian Fortress"
+	plural "Corellian Fortresses"
+	sprite "ship/corellian-fortress"
+	attributes
+		category "Heavy Warship"
+		"cost" 5800000
+		"shields" 6200
+		"hull" 7800
+		"required crew" 6
+		"bunks" 16
+		"mass" 760
+		"drag" 9.8
+		"heat dissipation" 0.50
+		"fuel capacity" 600
+		"cargo space" 15
+		"outfit space" 450
+		"weapon capacity" 180
+		"engine capacity" 85
+		weapon
+			"blast radius" 150
+			"shield damage" 1500
+			"hull damage" 750
+			"hit force" 2250
+	outfits
+		"Laser Turret" 4
+		"Anti-Missile Turret" 4
+
+		"RT-I Radiothermal"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Security Station"
+		"Laser Rifle" 6
+		"Ramscoop"
+
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Scram Drive"
+
+	turret -31 -54.6
+		under
+	turret 31 -54.6
+		under
+	turret -31 -55.1
+	turret 31 -55.1
+	turret -44.5 48.4
+	turret 44.5 48.4
+	turret -44 48.4
+		under
+	turret 44 48.4
+		under
+	engine -6.5 99.4 1
+	engine 6.5 99.4 1
+	engine -19.5 95.9 0.9
+	engine 19.5 95.9 0.9
+	engine -31 89.9 0.9
+	engine 31 89.9 0.9
+	engine -41.5 83.9 0.9
+	engine 41.5 83.9 0.9
+	bay "Drone" -1 28.9
+		under
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 15
+	explode "small explosion" 30
+	explode "medium explosion" 35
+	explode "large explosion" 25
+	explode "huge explosion" 12
+	"final explode" "final explosion large"
+	description "A spherical combat platform with eight turrets, a drone bay, and almost no cargo space. Built for convoy escort and station defense rather than hauling. Glacially slow but nearly impossible to flank, with the thickest hull in the Corellian lineup."
+
+ship "Corellian Fortress" "Corellian Fortress (Boarding)"
+	outfits
+		"Proton Turret" 2
+		"Tractor Beam" 3
+		"Blaster Turret" 3
+
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Water Coolant System"
+		"Security Station"
+		"Ramscoop"
+		"Fuel Pod"
+		"Laser Rifle" 10
+		"Fragmentation Grenades" 10
+
+		"Chipmunk Plasma Thruster"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Scram Drive"
+
+ship "Corellian Fortress" "Corellian Fortress (Blaster)"
+	outfits
+		"Quad Blaster Turret" 3
+		"Blaster Turret" 5
+
+		"RT-I Radiothermal"
+		"KP-6 Photovoltaic Array" 2
+		"LP144a Battery Pack"
+		"D67-TM Shield Generator"
+		"Water Coolant System"
+		"Security Station"
+		"Cooling Ducts"
+		"Ramscoop"
+		"Laser Rifle" 14
+		"Fragmentation Grenades" 14
+
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+ship "Corellian Fortress" "Corellian Fortress (Gunship)"
+	outfits
+		"Heavy Laser Turret" 2
+		"Quad Blaster Turret"
+		"Blaster Turret" 5
+
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Water Coolant System"
+		"Security Station"
+		"Ramscoop"
+		"Cooling Ducts"
+		"Laser Rifle" 6
+
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+
+# CEC Beam Drone — Fortress companion drone
+# Based on Combat Drone hull, no Navy license
+# CEC treatment: thicker hull (+29%), slightly more outfit room
+# Floor: Combat Drone (63k, 700 hull)
+ship "CEC Beam Drone"
+	sprite "ship/cec-beam-drone"
+	attributes
+		category "Drone"
+		"cost" 72000
+		"hull" 900
+		"automaton" 1
+		"mass" 22
+		"drag" .62
+		"heat dissipation" .85
+		"outfit space" 60
+		"weapon capacity" 8
+		"engine capacity" 28
+		weapon
+			"blast radius" 6
+			"shield damage" 60
+			"hull damage" 30
+			"hit force" 90
+	outfits
+		"Beam Laser"
+
+		"nGVF-AA Fuel Cell"
+		"Supercapacitor"
+
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+
+	engine 0.3 8.1 0.4
+	gun 0.4 -14.5 "Beam Laser"
+	explode "tiny explosion" 15
+	description "A compact beam drone built by Corellian Engineering as a companion for their Fortress escort platform. Sturdier than the Republic's Combat Drone and available without a Navy license, it carries the same Beam Laser in a reinforced hull. CEC's chief engineer calls it 'the simplest thing we build.'"
+	description "	Drones do not come equipped with a hyperdrive. You cannot carry a drone unless you have a ship in your fleet with a drone bay."
+
+
+# Corellian Ironclad — Mass-Produced Combat Escort
+# Floor: Argosy (1.96M, 4200 shields, 2600 hull)
+# Peer: Corellian Cargo (2.3M, 3200 shields, 4000 hull)
+# Ceiling: Between Cargo and Merchantman
+# Trade-off: Combat conversion of Cargo hull, 4 turrets, higher crew, minimal cargo (35), faster than before
+ship "Corellian Ironclad"
+	sprite "ship/corellian-ironclad"
+	attributes
+		category "Medium Warship"
+		"cost" 3400000
+		"shields" 4200
+		"hull" 4400
+		"required crew" 6
+		"bunks" 16
+		"mass" 620
+		"drag" 8.5
+		"heat dissipation" 0.55
+		"fuel capacity" 600
+		"cargo space" 35
+		"outfit space" 360
+		"weapon capacity" 140
+		"engine capacity" 90
+		weapon
+			"blast radius" 125
+			"shield damage" 1250
+			"hull damage" 625
+			"hit force" 1875
+	outfits
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret"
+		"Laser Turret"
+
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Ramscoop"
+
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+	turret -40.5 -7.6
+	turret 38.5 -7.6
+	turret -40.5 -7.6
+		under
+	turret 38.5 -7.1
+		under
+	engine 0 106.9 1.3
+	engine -19 102.4 1.2
+	engine 19 102.4 1.2
+	engine -36 95.4 1.2
+	engine 36 95.4 1.2
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 20
+	explode "small explosion" 36
+	explode "medium explosion" 30
+	explode "large explosion" 18
+	explode "huge explosion" 5
+	"final explode" "final explosion medium"
+	description "A combat conversion of the YT-1100 hull with four turrets and heavy armor plating at the expense of nearly all cargo space. Demands the largest crew of any Corellian ship. Popular with militia and escort services as an affordable, combat-ready alternative to purpose-built warships."
+
+ship "Corellian Ironclad" "Corellian Ironclad (Laser)"
+	outfits
+		"Heavy Laser Turret" 2
+		"Laser Turret" 2
+
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Laser Rifle" 11
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		Hyperdrive
+
+ship "Corellian Ironclad" "Corellian Ironclad (Blaster)"
+	outfits
+		"Quad Blaster Turret" 4
+
+		"nGVF-EE Fuel Cell"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Security Station"
+		"Laser Rifle" 10
+
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		Hyperdrive

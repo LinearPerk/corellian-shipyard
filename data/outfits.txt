@@ -1,0 +1,14 @@
+# CEC Hirsute Companion
+# Unique crew companion given at start — a long-lived family friend
+# Provides one free crew member and strong boarding combat value
+
+outfit "CEC Hirsute Companion"
+	category "Hand to Hand"
+	thumbnail "outfit/cec-hirsute-companion"
+	cost 0
+	"capture attack" 2
+	"capture defense" 2
+	"required crew" -1
+	"unique" 1
+	"unplunderable" 1
+	description "A towering, hirsute friend of the family who has crewed Corellian ships longer than most people have been alive. He doesn't say much, but he's handy with a wrench, deadly in a boarding action, and loyal to a fault. Your mother made him promise to look after you."

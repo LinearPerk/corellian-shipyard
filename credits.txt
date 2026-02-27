@@ -1,0 +1,15 @@
+corellian.ships
+author:
+	LinearPerk
+	https://github.com/LinearPerk
+
+ship data:
+	Ship definitions by LinearPerk
+
+ship sprites:
+	Ship sprites by LinearPerk
+
+scene images:
+	Found on Pinterest, original artists unknown
+	If you recognize any of these images, please contact LinearPerk
+	so we can credit the original creators

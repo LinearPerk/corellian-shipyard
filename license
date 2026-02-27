@@ -1,0 +1,23 @@
+corellian.ships - License Information
+
+Files: data/*
+Copyright: LinearPerk <linearperk@gmail.com>
+License: GPL-3+
+Comment: Ship definitions by LinearPerk.
+
+Files: images/ship/*
+Copyright: LinearPerk <linearperk@gmail.com>
+License: GPL-3+
+Comment: Ship sprites by LinearPerk. Fan art inspired by Star Wars
+  ship designs (Lucasfilm/Disney). Non-commercial fan mod.
+
+Files: images/scene/*
+Copyright: Unknown (see ATTRIBUTION.md)
+License: Unknown
+Comment: Scene images found on Pinterest, original artists unknown.
+  If you recognize any of these images, please contact LinearPerk
+  so we can credit the original creators.
+  scene/thumbnail.jpg is a processed crop by LinearPerk (GPL-3+).
+
+Full license text:
+  GPL-3+: https://www.gnu.org/licenses/gpl-3.0.html

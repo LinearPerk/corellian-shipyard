@@ -1,0 +1,81 @@
+# Corellian Prospector Start
+# Mining-focused alternative start: inherit the family Prospector on New Boston
+# Harder financial deal than vanilla — 1M debt, less cash, but a bigger ship
+# Start variant is weaker than base Prospector: lower shields, hull, outfit space
+# 4-scene cinematic conversation: the ship, the hull, the departure, the jump
+
+
+start "corellian"
+	name "Millennium Miner"
+	description `Your mother passed away last month. She spent thirty years flying a beat-up Corellian Prospector through the Dirt Belt. It was a hard life and yet still a good life. The banks all played dirty, so she played them against each other.`
+	description `	Now the ship and the debt are yours. The smart money says sell and take a factory job. But you've got a fast ship, a loyal crewmate, and a deep resolve to live among the stars.`
+	thumbnail "scene/thumbnail"
+	date 16 11 3013
+	system "Rutilicus"
+	planet "New Boston"
+	conversation "corellian intro"
+	account
+		credits 80000
+		score 400
+		mortgage Mortgage
+			principal 1000000
+			interest 0.004
+			term 365
+	set "license: Pilot's"
+	set "species: human"
+	set "human space start"
+	set "Intro [0]: offered"
+	set "Intro [0]: declined"
+	set "Intro [0]: done"
+
+
+conversation "corellian intro"
+	scene "scene/prospector"
+	`Pad 19 -- the cheap end of the yard, where she's been waiting since the funeral. The Falcon. Your mother's ship. Your ship now.`
+	`	A million credits of debt comes with her -- the ship lien, equipment loans, years of compounded interest. Your mother was always one step ahead of the bank, and she beat them in the end. The Falcon is still yours.`
+	name
+	action
+		give ship "Corellian Prospector (Start)" "the Falcon"
+	scene "scene/hull"
+	`	She's not pretty by showroom standards. The hull plates have been patched so many times the metal looks like driftwood. A faded CEC stamp marks her as one of the originals -- a handmade prototype built years before the production line opened on New Sahara.`
+	`	But she's beautiful. The way things are beautiful when they've earned every mark. Every scar is a run your mother made and came home from. Every weld is a promise she kept. This ship brought her home every time.`
+	choice
+		`	(Board the Falcon.)`
+	scene "scene/departure"
+	`	Half the Dirt Belt was built by ships like this -- families hauling ore in aging Corellian hulls, passing the ship and its debts from one generation to the next. Most of those families are gone now. Rents and interest ate them up.`
+	`	Your mother held on longer than anyone. Worked the runs alone after your father died, kept the Falcon flying when every banker and broker told her to sell. The bank raised the interest twice -- just restructure the loan... They did everything they could to force her out. She outlasted them.`
+
+	choice
+		`	(Plot a course.)`
+	scene "scene/hyperspace"
+	`	There are mining routes loaded on the nav chart. But the galaxy is bigger than the Dirt Belt.`
+	`	-- Phecda: the CEC shipyard, mysterious engineers, the best round ships in human space`
+	`	-- Arneb: a black market where CEC ships are sometimes sighted`
+	`	You pick a heading and punch it in. The stars stretch, the Falcon leaps. In the co-pilot's seat, a hirsute friend of the family growls in agreement.`
+	`	You are on your own now. No sweat though -- just be brave, clever, wise... and a little bit lucky.`
+	action
+		outfit "CEC Hirsute Companion"
+
+
+ship "Corellian Prospector" "Corellian Prospector (Start)"
+	add attributes
+		"cost" -600000
+		"shields" -600
+		"hull" -700
+		"required crew" -1
+		"bunks" -2
+		"fuel capacity" -50
+		"cargo space" -20
+		"outfit space" -30
+		"weapon capacity" -30
+		"engine capacity" -10
+	outfits
+		"Mining Laser Turret"
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Asteroid Scanner"
+		"Ramscoop"
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"Scram Drive"
