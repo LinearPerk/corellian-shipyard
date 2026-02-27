@@ -1,7 +1,7 @@
-### Corellian Ships<br>
-<br>
+### Corellian Ships
+
 ![Corellian ship lineup](corellian-lineup.png)
-<br>
+
 Adds 10 ships and a beam drone from the Corellian Engineering Corporation (CEC) — a line of modular freighters and combat variants designed around hull durability and cargo capacity rather than raw firepower. These ships carry fewer hardpoints than their vanilla counterparts but compensate with better stats per ton: thicker hulls, more cargo space, and generous outfit capacity for customization. They slot into the Light Freighter through Heavy Warship range, giving independent traders, escorts, and pirates a distinct alternative to standard human ships.<br>
 <br>
 Includes an alternative start scenario — begin the game as a Dirt Belt mining family's heir with a beat-up Prospector and a mountain of debt.<br>
