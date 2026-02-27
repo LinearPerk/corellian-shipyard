@@ -1,6 +1,6 @@
 ### Corellian Ships
 
-![Corellian ship lineup](corellian-lineup.png)
+<img src="corellian-lineup.png" alt="Corellian ship lineup" width="600">
 
 Adds 10 ships and a beam drone from the Corellian Engineering Corporation (CEC) — a line of modular freighters and combat variants designed around hull durability and cargo capacity rather than raw firepower. These ships carry fewer hardpoints than their vanilla counterparts but compensate with better stats per ton: thicker hulls, more cargo space, and generous outfit capacity for customization. They slot into the Light Freighter through Heavy Warship range, giving independent traders, escorts, and pirates a distinct alternative to standard human ships.
 
